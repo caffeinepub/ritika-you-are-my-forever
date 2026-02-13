@@ -1,0 +1,184 @@
+{
+  "schemaVersion": "1.0.0",
+  "projectStateVersion": 7,
+  "summary": "Romantic Valentine’s Day single-page website for Ritika with dreamy pink/red/white theme, animated floating hearts background, smooth scrolling, glowing effects, interactive proposal buttons, music toggle, countdown timer, and multiple romantic content sections; personalize footer to \"Made with ❤️ by Rajat\" and allow adding custom photos.",
+  "architectural_notes": [
+    "Deployment domain/slug must be 5–50 characters and contain only letters, numbers, and hyphens (no commas/special characters)."
+  ],
+  "known_issues": [
+    "User-uploaded photos are not visible when sharing the live link (Memories gallery images not persisting/serving in production).",
+    "Deployment failed due to invalid domain/slug: \"ritika,-you-are-my-forever\" contains an illegal character (comma).",
+    "Build/deploy encountered an internal configuration error (\"Please inform the Caffeine team\")."
+  ],
+  "isFixRequest": true,
+  "existing_features": [
+    {
+      "id": "feature-create-a-mobile-friendly-single-page-valentine-s-day-website-with-a-dreamy-magical-cute-romantic-look-using-soft-pink-red-white-colors-soft-romantic-fonts-subtle-glow-effects-smooth-animations-and-smooth-scrolling-between-sections",
+      "title": "Create a mobile-friendly single-page Valentine’s Day website with a dreamy, magical, cute romantic look using soft pink/red/white colors, soft romantic fonts, subtle glow effects, smooth animations, and smooth scrolling between sections.",
+      "reqIds": [
+        "REQ-1"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-add-a-floating-animated-hearts-background-effect-across-the-whole-page-continuous-subtle-non-intrusive-that-does-not-block-interactions-with-the-content",
+      "title": "Add a floating animated hearts background effect across the whole page (continuous, subtle, non-intrusive) that does not block interactions with the content.",
+      "reqIds": [
+        "REQ-2"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-set-the-website-document-page-title-to-exactly-ritika-you-are-my-forever",
+      "title": "Set the website document/page title to exactly: \"Ritika, You Are My Forever ❤️\".",
+      "reqIds": [
+        "REQ-3"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-implement-the-hero-section-with-1-headline-text-exactly-happy-valentine-s-day-my-love-ritika-2-subtext-exactly-from-the-moment-you-came-into-my-life-everything-became-more-beautiful-and-3-a-glowing-heart-styled-button-labeled-exactly-click-to-see-my-heart-that-smooth-scrolls-to-the-love-message-section-when-clicked",
+      "title": "Implement the Hero section with: (1) headline text exactly \"Happy Valentine’s Day, My Love Ritika 💖\", (2) subtext exactly \"From the moment you came into my life, everything became more beautiful.\", and (3) a glowing heart-styled button labeled exactly \"Click to See My Heart 💓\" that smooth-scrolls to the Love Message section when clicked.",
+      "reqIds": [
+        "REQ-4"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-create-a-love-message-section-containing-an-original-heartfelt-romantic-message-in-english-expressing-deep-love-appreciation-gratitude-and-how-special-ritika-is-the-tone-must-be-emotional-sweet-and-genuine",
+      "title": "Create a Love Message section containing an original heartfelt romantic message in English expressing deep love, appreciation, gratitude, and how special Ritika is; the tone must be emotional, sweet, and genuine.",
+      "reqIds": [
+        "REQ-5"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-add-a-section-titled-exactly-10-reasons-why-i-love-you-containing-10-beautiful-animated-reason-cards-gentle-hover-entrance-animations-with-the-following-exact-reason-lines-one-per-card-1-your-smile-lights-up-my-world-2-you-understand-me-like-no-one-else-3-you-make-ordinary-days-magical-4-your-laugh-is-my-favorite-sound-5-you-are-my-comfort-and-my-adventure-6-you-support-my-dreams-7-you-make-me-a-better-person-8-you-care-so-deeply-9-you-are-my-safe-place-10-you-are-my-forever",
+      "title": "Add a section titled exactly \"10 Reasons Why I Love You ❤️\" containing 10 beautiful animated reason cards (gentle hover/entrance animations) with the following exact reason lines (one per card): 1) \"Your smile lights up my world\" 2) \"You understand me like no one else\" 3) \"You make ordinary days magical\" 4) \"Your laugh is my favorite sound\" 5) \"You are my comfort and my adventure\" 6) \"You support my dreams\" 7) \"You make me a better person\" 8) \"You care so deeply\" 9) \"You are my safe place\" 10) \"You are my forever\".",
+      "reqIds": [
+        "REQ-6"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-create-a-memory-section-titled-exactly-our-beautiful-memories-with-a-romantic-gallery-layout-using-heart-shaped-image-frames-and-placeholder-images",
+      "title": "Create a Memory section titled exactly \"Our Beautiful Memories 📸\" with a romantic gallery layout using heart-shaped image frames and placeholder images.",
+      "reqIds": [
+        "REQ-7"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-create-a-future-promise-section-titled-exactly-my-promise-to-you-containing-an-original-romantic-promise-in-english-about-loving-ritika-supporting-her-growing-together-and-building-a-beautiful-future-side-by-side",
+      "title": "Create a Future Promise section titled exactly \"My Promise to You 💍\" containing an original romantic promise in English about loving Ritika, supporting her, growing together, and building a beautiful future side by side.",
+      "reqIds": [
+        "REQ-8"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-implement-the-special-proposal-section-important-titled-exactly-ritika-will-you-be-my-valentine-with-two-primary-glowing-buttons-labeled-exactly-yes-and-of-course-yes-plus-a-playful-no-button-that-attempts-to-evade-the-pointer-moves-away-and-or-disappears-when-hovered-or-approached-so-it-is-hard-impossible-to-click",
+      "title": "Implement the Special Proposal section (important) titled exactly \"Ritika, Will You Be My Valentine? 💝\" with two primary glowing buttons labeled exactly \"Yes 💖\" and \"Of Course Yes 😘\", plus a playful \"No\" button that attempts to evade the pointer (moves away and/or disappears) when hovered or approached so it is hard/impossible to click.",
+      "reqIds": [
+        "REQ-9"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-when-the-user-clicks-either-yes-or-of-course-yes-show-a-full-screen-celebration-overlay-with-floating-hearts-animation-and-display-the-exact-message-lines-1-you-just-made-me-the-happiest-person-alive-and-then-2-i-love-you-ritika-forever-always-the-overlay-should-feel-celebratory-and-romantic-and-provide-a-clear-way-to-dismiss-close-it-afterward",
+      "title": "When the user clicks either \"Yes 💖\" or \"Of Course Yes 😘\", show a full-screen celebration overlay with floating hearts animation and display the exact message lines: 1) \"You Just Made Me The Happiest Person Alive ❤️\" and then 2) \"I Love You Ritika ♾️ Forever & Always\". The overlay should feel celebratory and romantic, and provide a clear way to dismiss/close it afterward.",
+      "reqIds": [
+        "REQ-10"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-add-a-soft-romantic-background-music-option-that-is-muted-off-by-default-and-can-be-toggled-via-a-clear-play-pause-control-the-control-must-indicate-current-state-playing-vs-not-playing",
+      "title": "Add a soft romantic background music option that is muted/off by default and can be toggled via a clear play/pause control; the control must indicate current state (playing vs not playing).",
+      "reqIds": [
+        "REQ-11"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-add-a-countdown-section-that-displays-a-live-updating-countdown-timer-to-next-valentine-s-day-with-you-counting-down-to-the-next-february-14-relative-to-the-user-s-current-date-time",
+      "title": "Add a Countdown section that displays a live updating countdown timer to \"Next Valentine’s Day With You ❤️\" (counting down to the next February 14 relative to the user’s current date/time).",
+      "reqIds": [
+        "REQ-12"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-add-a-final-section-that-prominently-displays-big-glowing-romantic-text-exactly-every-love-story-is-beautiful-but-ours-is-my-favorite",
+      "title": "Add a Final section that prominently displays big glowing romantic text exactly: \"Every Love Story Is Beautiful, But Ours Is My Favorite 💞\".",
+      "reqIds": [
+        "REQ-13"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-add-a-footer-that-reads-exactly-made-with-by-your-name",
+      "title": "Add a footer that reads exactly: \"Made with ❤️ by (Your Name)\".",
+      "reqIds": [
+        "REQ-14"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-update-the-footer-attribution-text-to-read-exactly-made-with-by-rajat-replacing-the-your-name-placeholder",
+      "title": "Update the footer attribution text to read exactly: \"Made with ❤️ by Rajat\" (replacing the \"(Your Name)\" placeholder).",
+      "reqIds": [
+        "REQ-15"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-allow-the-user-to-add-replace-the-six-our-beautiful-memories-gallery-images-with-their-own-photos-from-their-device-while-keeping-the-existing-heart-shaped-frames-and-layout",
+      "title": "Allow the user to add/replace the six \"Our Beautiful Memories 📸\" gallery images with their own photos from their device, while keeping the existing heart-shaped frames and layout.",
+      "reqIds": [
+        "REQ-16"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-add-the-user-uploaded-6-photos-wp1-1-jpeg-wp2-1-jpeg-wp3-1-jpeg-wp4-1-jpeg-wp5-jpeg-wp6-jpeg-to-the-frontend-as-static-assets-and-use-them-as-the-default-images-for-the-6-heart-shaped-frames-in-the-our-beautiful-memories-section-so-they-are-visible-to-any-visitor-when-the-link-is-shared",
+      "title": "Add the user-uploaded 6 photos (wp1-1.jpeg, wp2-1.jpeg, wp3-1.jpeg, wp4-1.jpeg, wp5.jpeg, wp6.jpeg) to the frontend as static assets and use them as the default images for the 6 heart-shaped frames in the “Our Beautiful Memories 📸” section so they are visible to any visitor when the link is shared.",
+      "reqIds": [
+        "REQ-17"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-update-the-memories-photo-logic-so-that-local-uploads-remain-optional-personalization-but-never-prevent-the-shared-default-photos-from-appearing-for-new-visitors-i-e-if-there-is-no-saved-local-photo-for-a-slot-it-must-display-the-new-default-static-photo-for-that-slot",
+      "title": "Update the Memories photo logic so that local uploads remain optional personalization, but never prevent the shared default photos from appearing for new visitors (i.e., if there is no saved local photo for a slot, it must display the new default static photo for that slot).",
+      "reqIds": [
+        "REQ-18"
+      ],
+      "version": 1
+    }
+  ],
+  "new_feature_requests": [
+    {
+      "id": "AR-1",
+      "summary": "Build romantic Valentine’s Day website for Ritika with themed sections (hero, love message, 10 reasons cards, memories gallery, promise, proposal celebration, countdown, final message, footer) plus floating hearts background, smooth scrolling, glow effects, mobile-friendly design, music toggle (muted by default), and playful interactive proposal buttons.",
+      "reqIds": [],
+      "status": "pending"
+    },
+    {
+      "id": "AR-2",
+      "summary": "Replace footer text placeholder \"(Your Name)\" with \"Rajat\" (i.e., display: \"Made with ❤️ by Rajat\").",
+      "reqIds": [],
+      "status": "pending"
+    },
+    {
+      "id": "AR-3",
+      "summary": "Allow adding/replacing the memories gallery placeholder images with user-provided photos (custom photos of the couple).",
+      "reqIds": [],
+      "status": "pending"
+    }
+  ],
+  "gameProjectType": "none",
+  "projectName": "Ritika, You Are My Forever",
+  "clarification_mode": "instant",
+  "clarification_rounds": 0
+}

@@ -1,0 +1,79 @@
+{
+  "kind": "implementation_plan",
+  "version": "1.0",
+  "title": "Make Memories default photos shareable via static assets",
+  "requirements": [
+    {
+      "id": "REQ-17",
+      "summary": "Ship the 6 uploaded photos as frontend static assets and use them as the default images in the Memories heart-frame gallery so they appear for any visitor.",
+      "acceptanceCriteria": [
+        "The 6 uploaded images are included in the deployed build as static files (not dependent on localStorage).",
+        "Opening the shared link on a different device/browser (fresh session) shows all 6 uploaded photos in the Memories section by default.",
+        "The heart-shaped frames and existing gallery layout remain unchanged."
+      ],
+      "file_operations": [
+        {
+          "path": "frontend/public/assets/memories/wp1-1.jpeg",
+          "operation": "create",
+          "description": "Add the uploaded memory photo as a public static asset so it is available to all visitors in deployed builds."
+        },
+        {
+          "path": "frontend/public/assets/memories/wp2-1.jpeg",
+          "operation": "create",
+          "description": "Add the uploaded memory photo as a public static asset so it is available to all visitors in deployed builds."
+        },
+        {
+          "path": "frontend/public/assets/memories/wp3-1.jpeg",
+          "operation": "create",
+          "description": "Add the uploaded memory photo as a public static asset so it is available to all visitors in deployed builds."
+        },
+        {
+          "path": "frontend/public/assets/memories/wp4-1.jpeg",
+          "operation": "create",
+          "description": "Add the uploaded memory photo as a public static asset so it is available to all visitors in deployed builds."
+        },
+        {
+          "path": "frontend/public/assets/memories/wp5.jpeg",
+          "operation": "create",
+          "description": "Add the uploaded memory photo as a public static asset so it is available to all visitors in deployed builds."
+        },
+        {
+          "path": "frontend/public/assets/memories/wp6.jpeg",
+          "operation": "create",
+          "description": "Add the uploaded memory photo as a public static asset so it is available to all visitors in deployed builds."
+        },
+        {
+          "path": "frontend/src/hooks/useMemoryPhotos.ts",
+          "operation": "modify",
+          "description": "Replace the generated placeholder defaults with the new static asset paths (frontend/public/assets/memories/wp1-1.jpeg ... wp6.jpeg) so fresh sessions show the uploaded set by default."
+        }
+      ]
+    },
+    {
+      "id": "REQ-18",
+      "summary": "Ensure local uploads are optional personalization that override the shared defaults per slot, and clearing a slot restores the new shared default photo rather than the old generated placeholder.",
+      "acceptanceCriteria": [
+        "In a fresh session with empty localStorage, each slot resolves to one of the 6 new static photos (not the old generated placeholders).",
+        "If a user uploads a new photo into a slot, that slot immediately shows the uploaded photo for that user/session, and persists via localStorage as it does today.",
+        "Using the Clear/Remove action restores the slot back to the corresponding new default static photo (the uploaded set), not the old generated placeholder."
+      ],
+      "file_operations": [
+        {
+          "path": "frontend/src/hooks/useMemoryPhotos.ts",
+          "operation": "modify",
+          "description": "Harden localStorage initialization/migration so stored values never block defaults: normalize to 6 slots, treat missing/invalid entries as empty, and ignore any stored values that reference the old generated placeholder assets so the new static defaults always appear when no real upload exists."
+        },
+        {
+          "path": "frontend/src/hooks/useMemoryPhotos.ts",
+          "operation": "modify",
+          "description": "Expose an explicit per-slot 'isCustom' signal (or equivalent) so the UI can reliably show the Clear/Remove control only when a user has uploaded a custom photo, regardless of what the default static asset paths are."
+        },
+        {
+          "path": "frontend/src/components/MemoriesSection.tsx",
+          "operation": "modify",
+          "description": "Update custom-photo detection to use the hook-provided 'isCustom' (instead of checking the src prefix) so defaults are never misclassified and the Clear/Remove action correctly restores the new static default image while keeping the existing heart-frame styling and grid layout intact."
+        }
+      ]
+    }
+  ]
+}

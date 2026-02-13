@@ -1,0 +1,42 @@
+{
+  "kind": "feature_evidence_report",
+  "features": [
+    {
+      "featureId": "feature-add-the-user-uploaded-6-photos-wp1-1-jpeg-wp2-1-jpeg-wp3-1-jpeg-wp4-1-jpeg-wp5-jpeg-wp6-jpeg-to-the-frontend-as-static-assets-and-use-them-as-the-default-images-for-the-6-heart-shaped-frames-in-the-our-beautiful-memories-section-so-they-are-visible-to-any-visitor-when-the-link-is-shared",
+      "featureTitle": "Add the user-uploaded 6 photos (wp1-1.jpeg, wp2-1.jpeg, wp3-1.jpeg, wp4-1.jpeg, wp5.jpeg, wp6.jpeg) to the frontend as static assets and use them as the default images for the 6 heart-shaped frames in the “Our Beautiful Memories 📸” section so they are visible to any visitor when the link is shared.",
+      "files": [
+        "frontend/src/hooks/useMemoryPhotos.ts"
+      ],
+      "components": [
+        "core-infrastructure@1.0.2",
+        "shadcn-ui@1.0.0",
+        "build-template-react@1.0.0",
+        "initial-app@1.0.0",
+        "github-export-icp-cli@1.0.0"
+      ],
+      "testIds": [
+        "REQ-17"
+      ],
+      "confidence": "high"
+    },
+    {
+      "featureId": "feature-update-the-memories-photo-logic-so-that-local-uploads-remain-optional-personalization-but-never-prevent-the-shared-default-photos-from-appearing-for-new-visitors-i-e-if-there-is-no-saved-local-photo-for-a-slot-it-must-display-the-new-default-static-photo-for-that-slot",
+      "featureTitle": "Update the Memories photo logic so that local uploads remain optional personalization, but never prevent the shared default photos from appearing for new visitors (i.e., if there is no saved local photo for a slot, it must display the new default static photo for that slot).",
+      "files": [
+        "frontend/src/components/MemoriesSection.tsx",
+        "frontend/src/hooks/useMemoryPhotos.ts"
+      ],
+      "components": [
+        "core-infrastructure@1.0.2",
+        "shadcn-ui@1.0.0",
+        "build-template-react@1.0.0",
+        "initial-app@1.0.0",
+        "github-export-icp-cli@1.0.0"
+      ],
+      "testIds": [
+        "REQ-18"
+      ],
+      "confidence": "high"
+    }
+  ]
+}

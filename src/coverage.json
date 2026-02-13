@@ -1,0 +1,59 @@
+{
+  "kind": "coverage_report",
+  "version": "1.0",
+  "generatedAt": "2026-02-13T13:36:07.803Z",
+  "sources": {
+    "buildRequest": true,
+    "implementationPlan": true
+  },
+  "requirements": {
+    "total": 2,
+    "implemented": 2,
+    "items": [
+      {
+        "id": "REQ-17",
+        "summary": "Add the user-uploaded 6 photos (wp1-1.jpeg, wp2-1.jpeg, wp3-1.jpeg, wp4-1.jpeg, wp5.jpeg, wp6.jpeg) to the frontend as static assets and use them as the default images for the 6 heart-shaped frames in the “Our Beautiful Memories 📸” section so they are visible to any visitor when the link is shared.",
+        "status": "implemented",
+        "plannedFiles": [
+          "frontend/public/assets/memories/wp1-1.jpeg",
+          "frontend/public/assets/memories/wp2-1.jpeg",
+          "frontend/public/assets/memories/wp3-1.jpeg",
+          "frontend/public/assets/memories/wp4-1.jpeg",
+          "frontend/public/assets/memories/wp5.jpeg",
+          "frontend/public/assets/memories/wp6.jpeg",
+          "frontend/src/hooks/useMemoryPhotos.ts"
+        ],
+        "matchedFiles": [
+          "frontend/src/hooks/useMemoryPhotos.ts"
+        ]
+      },
+      {
+        "id": "REQ-18",
+        "summary": "Update the Memories photo logic so that local uploads remain optional personalization, but never prevent the shared default photos from appearing for new visitors (i.e., if there is no saved local photo for a slot, it must display the new default static photo for that slot).",
+        "status": "implemented",
+        "plannedFiles": [
+          "frontend/src/hooks/useMemoryPhotos.ts",
+          "frontend/src/hooks/useMemoryPhotos.ts",
+          "frontend/src/components/MemoriesSection.tsx"
+        ],
+        "matchedFiles": [
+          "frontend/src/hooks/useMemoryPhotos.ts",
+          "frontend/src/hooks/useMemoryPhotos.ts",
+          "frontend/src/components/MemoriesSection.tsx"
+        ]
+      }
+    ]
+  },
+  "changedFiles": [
+    "build-request.json",
+    "feature_evidence.json",
+    "frontend-file-summaries.txt",
+    "frontend-implementation-plan.json",
+    "frontend/src/components/MemoriesSection.tsx",
+    "frontend/src/hooks/useMemoryPhotos.ts",
+    "project_state.json",
+    "scratch/component-selection.json",
+    "spec.md",
+    "spec_vs_diff_report.json"
+  ]
+}

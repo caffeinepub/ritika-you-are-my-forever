@@ -1,0 +1,21 @@
+{
+  "frontend/src/App.tsx": "Main application component that orchestrates all sections of the Valentine's Day website with state management for the celebration overlay and smooth scrolling functionality.",
+  "frontend/src/components/HeartsBackground.tsx": "Renders animated floating hearts across the entire background using CSS animations with randomized positions, sizes, and durations.",
+  "frontend/src/components/HeroSection.tsx": "Hero section displaying the main Valentine's Day greeting with headline, subtext, and a glowing CTA button that triggers smooth scrolling.",
+  "frontend/src/components/LoveMessageSection.tsx": "Displays a heartfelt romantic message expressing deep love, appreciation, and gratitude for Ritika in a beautifully styled card.",
+  "frontend/src/components/ReasonsSection.tsx": "Grid of 10 animated cards showing the exact reasons why the user loves Ritika, with staggered entrance animations.",
+  "frontend/src/components/MemoriesSection.tsx": "Photo gallery section displaying 6 heart-framed images with interactive upload functionality on hover, clear buttons shown only for custom user uploads, and localStorage persistence using the useMemoryPhotos hook with the new isCustomPhoto detection.",
+  "frontend/src/components/PromiseSection.tsx": "Displays a romantic promise about love, support, growth, and building a future together in an elegant card layout.",
+  "frontend/src/components/ProposalSection.tsx": "Interactive proposal section with two \"Yes\" buttons and a playful evasive \"No\" button that moves away on hover.",
+  "frontend/src/components/CelebrationOverlay.tsx": "Full-screen celebration modal with floating hearts animation and romantic messages displayed when proposal is accepted.",
+  "frontend/src/components/MusicToggle.tsx": "Fixed position music control button that toggles romantic background music on/off with visual state indication.",
+  "frontend/src/components/CountdownSection.tsx": "Live countdown timer displaying days, hours, minutes, and seconds until the next Valentine's Day.",
+  "frontend/src/components/FinalSection.tsx": "Displays the final romantic quote with prominent glowing text styling.",
+  "frontend/src/components/Footer.tsx": "Simple footer with attribution text \"Made with ❤️ by Rajat\".",
+  "frontend/src/hooks/useValentinesCountdown.ts": "Custom React hook that calculates and updates countdown to next February 14th every second.",
+  "frontend/src/hooks/useQueries.ts": "Empty placeholder file as no backend queries are needed for this static website.",
+  "frontend/src/index.css": "Global styles with romantic pink/red/white OKLCH color system, custom animations, glow effects, and all romantic styling utilities.",
+  "frontend/tailwind.config.js": "Tailwind configuration with romantic serif fonts (Georgia, Playfair Display) and extended theme settings.",
+  "frontend/index.html": "HTML entry point with romantic font imports and exact page title as specified.",
+  "frontend/src/hooks/useMemoryPhotos.ts": "Custom React hook managing 6 memory photo slots with localStorage persistence, using the uploaded photos (wp1-1.jpeg through wp6.jpeg) as shared defaults visible to all visitors, with migration logic to ignore old generated placeholders and explicit isCustom tracking for user uploads."
+}

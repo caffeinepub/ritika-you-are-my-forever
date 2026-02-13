@@ -1,0 +1,55 @@
+{
+  "kind": "build_request",
+  "title": "Make uploaded Memories photos visible to everyone when the link is shared",
+  "priority": "high",
+  "requirements": [
+    {
+      "id": "REQ-17",
+      "text": "Add the user-uploaded 6 photos (wp1-1.jpeg, wp2-1.jpeg, wp3-1.jpeg, wp4-1.jpeg, wp5.jpeg, wp6.jpeg) to the frontend as static assets and use them as the default images for the 6 heart-shaped frames in the “Our Beautiful Memories 📸” section so they are visible to any visitor when the link is shared.",
+      "target": "frontend",
+      "source": {
+        "messageIds": [
+          "msg-1"
+        ],
+        "quotes": [
+          "yes please update the photos i cant see my photos when i am sharing the link"
+        ]
+      },
+      "acceptanceCriteria": [
+        "The 6 uploaded images are included in the deployed build as static files (not dependent on localStorage).",
+        "Opening the shared link on a different device/browser (fresh session) shows all 6 uploaded photos in the Memories section by default.",
+        "The heart-shaped frames and existing gallery layout remain unchanged."
+      ]
+    },
+    {
+      "id": "REQ-18",
+      "text": "Update the Memories photo logic so that local uploads remain optional personalization, but never prevent the shared default photos from appearing for new visitors (i.e., if there is no saved local photo for a slot, it must display the new default static photo for that slot).",
+      "target": "frontend",
+      "source": {
+        "messageIds": [
+          "msg-1"
+        ],
+        "quotes": [
+          "i cant see my photos when i am sharing the link"
+        ]
+      },
+      "acceptanceCriteria": [
+        "In a fresh session with empty localStorage, each slot resolves to one of the 6 new static photos (not the old generated placeholders).",
+        "If a user uploads a new photo into a slot, that slot immediately shows the uploaded photo for that user/session, and persists via localStorage as it does today.",
+        "Using the Clear/Remove action restores the slot back to the corresponding new default static photo (the uploaded set), not the old generated placeholder."
+      ]
+    }
+  ],
+  "constraints": [
+    "Do not edit files under frontend/src/components/ui or any paths listed in frontend.immutablePaths.",
+    "Keep the Memories section heart-frame styling and grid layout intact."
+  ],
+  "nonGoals": [
+    "Do not implement backend/canister storage for user-uploaded photos in this change.",
+    "Do not add new authentication or admin controls."
+  ],
+  "imageRequirements": {
+    "required": [],
+    "edits": []
+  }
+}

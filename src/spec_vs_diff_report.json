@@ -1,0 +1,25 @@
+{
+  "kind": "spec_vs_diff_report",
+  "version": "1.0",
+  "generatedAt": "2026-02-13T13:36:07.800Z",
+  "summary": "REQ-18’s logic update is implemented: new default photo paths are used when no custom localStorage photo exists, custom uploads persist, and clearing restores the new defaults. However, REQ-17 is not fully satisfied because the diff does not show the 6 JPEG files being added to the repo/build as static assets (no added files), only references to expected asset paths.",
+  "missing_requirements": [
+    {
+      "id": "REQ-17",
+      "requirement": "Add the user-uploaded 6 photos (wp1-1.jpeg, wp2-1.jpeg, wp3-1.jpeg, wp4-1.jpeg, wp5.jpeg, wp6.jpeg) to the frontend as static assets and use them as the default images for the 6 heart-shaped frames so they are visible to any visitor when the link is shared.",
+      "reason": "The code now references the new default image paths, but the diff shows no added files, so there is no evidence the 6 JPEGs were actually added to the frontend as static assets and included in the deployed build.",
+      "evidence": [
+        "File diff summary: \"Added: 0\" (no static image files added)",
+        "frontend/src/hooks/useMemoryPhotos.ts (DEFAULT_PHOTOS references '/assets/wp1-1.jpeg' ... '/assets/wp6.jpeg')"
+      ]
+    }
+  ],
+  "hallucinated_features": [],
+  "confidence": 0.74,
+  "changed_files": [
+    "frontend-file-summaries.txt",
+    "frontend/src/components/MemoriesSection.tsx",
+    "frontend/src/hooks/useMemoryPhotos.ts",
+    "project_state.json"
+  ]
+}
